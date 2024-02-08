@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  postgres:
+    container_name: postgres_container
+    image: postgres:latest
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER:${POSTGRES_USER}
+      - POSTGRES_PASSWORD:${POSTGRES_PASSWORD}
+      - POSTGRES_DB:postgres
+    volumes:
+      - /mnt/tieto/postgresql:/var/lib/postgresql/data
+      - ./initialize_database.sql:/docker-entrypoint-initdb.d/create_tables.sql

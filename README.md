@@ -1,13 +1,14 @@
 **Run the app:**
-1. Clone the repo and CD into it
-2. Set the environment variables (that are used in `application.properties` and `docker-compose.yml`)
-3. Run the database:
+1. Clone the repo: `git clone https://github.com/brilingas/tieto-task.git`
+2. Change directory to the application's: `cd tieto-task`
+3. Set the environment variables (that are used in `application.properties` and `docker-compose.yml`)
+4. Run the database:
    - Check if you have docker-compose: `docker-compose version`. If you dont, then install it.
    - Give needed permissions to docker: `sudo chmod -R a+rx /mnt/tieto`
    - Launch the database with some preexisting records: `docker-compose up -d`
-4. (Optional). Connect your database browser
-5. Run the app. I suggest to use your IDE for it and browsing your database too. For running the app from the command line you would need to have your maven version higher than 3.6.3
-6. Open Postman, and make some GET requests for `localhost:8080/api/v1/`. Add request parameters `distance` and `season`. E.g. `localhost:8080/api/v1/?distance=20&season=summer`
+5. (Optional). Connect your database browser
+6. Run the app. I suggest to use your IDE for it and browsing your database too. For running the app from the command line you would need to have your maven version higher than 3.6.3
+7. Open Postman, and make some GET requests for `localhost:8080/api/v1/`. Add request parameters `distance` and `season`. E.g. `localhost:8080/api/v1/?distance=20&season=summer`
 
 
 **Things to keep in mind**
